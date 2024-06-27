@@ -1,0 +1,31 @@
+1.  SELECT * FROM student (memanggil semua data di database)
+    WHERE age = 15 (hanya memanggil data yang umurnya 15 saja)
+
+2.  SELECT nama_student, exam_score FROM student (memanggil nama dan nilai dari db student)
+    WHERE class = 9B (hanya memanggil yang kelas 9B saja)
+
+3.  SELECT * FROM student (memanggil semua data di database)
+    ORDER BY exam_score DESC (mengurutkan semua nilai dari database mulai dari nilai yang terbesar sampai yang ke terkecil)
+
+4.  SELECT class, COUNT(*) AS jumlah_siswa (memilih kolom class dan menghitung jumlah baris dalam setiap kelas, memberikan alias jumlah_siswa pada hasilnya)
+    FROM student GROUP BY class (Menunjukkan tabel student sebagai sumber data lalu Mengelompokkan hasil berdasarkan kolom class.)
+
+5.  SELECT class, AVG(exam_score) (memilih kolom class dan menghitung rata-rata dari kolom exam_score lau memberikan alias average_exam_score pada hasilnya.)
+    FROM student GROUP BY class LIMIT 2 (menunjukkan tabel student sebagai sumber data, mengelompokkan hasil berdasarkan kolom class lalu Membatasi jumlah hasil yang dikembalikan menjadi 2 baris saja)
+
+6.  SELECT class FROM student (memilih kolom class dari tabel student)
+    GROUP BY class HAVING COUNT(*) = 1 (memilih kolom class dari tabel student. menetapkan kondisi di mana hanya kelompok dengan jumlah siswa sama dengan 1 yang dipilih.)
+
+7.  SELECT * FROM student (memilih kolom class dari tabel student)
+    ORDER BY enrollment_date ASC (mengurutkan hasil berdasarkan kolom enrollment_date secara naik (dari yang paling awal ke yang paling akhir))
+    LIMIT 5 (membatasi jumlah hasil yang dikembalikan menjadi 5 baris saja)
+
+8.  SELECT nama_student, exam_score (memilih kolom nama dan exam_score dari tabel student, serta memberikan alias nama_student pada kolom nama)
+    FROM student WHERE exam_score > 80 AND age 14 (menunjukkan tabel student sebagai sumber data lalu menetapkan kondisi di mana hanya siswa dengan nilai ujian lebih dari 80 dan berusia lebih dari 14 tahun yang dipilih.)
+
+9.  SELECT age, AVG(exam_score) AS rata2_nilai_ujian (memilih kolom age dan menghitung rata-rata dari kolom exam_score, memberikan alias rata2_nilai_ujian pada hasilnya)
+    FROM student WHERE age = 16 (menunjukkan tabel student sebagai sumber data, menetapkan kondisi di mana hanya siswa yang berusia 16 tahun yang dipilih)
+
+10  SELECT nama_student, exam_score (Memilih kolom nama dan exam_score dari tabel student, serta memberikan alias nama_student pada kolom nama)
+    FROM student WHERE class = "8A" (menunjukkan tabel student sebagai sumber data lalu Menetapkan kondisi di mana hanya siswa dari kelas '8A' yang dipilih)
+    ORDER BY exam_score DESC LIMIT 1 (mengurutkan hasil berdasarkan kolom exam_score secara menurun (nilai tertinggi di atas) lalu membatasi jumlah hasil yang dikembalikan menjadi 1 baris saja)

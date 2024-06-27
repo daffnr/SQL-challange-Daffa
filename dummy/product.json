@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "sabun mandi",
+      "description": "lifebouy",
+      "harga": "10000",
+      "stock": "100"
+    },
+    {
+      "id": 2,
+      "name": "minyak goreng",
+      "description": "sunco",
+      "harga": "30000",
+      "stock": "50"
+    }
+  ]
+}
